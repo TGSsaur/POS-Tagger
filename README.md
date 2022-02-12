@@ -1,15 +1,21 @@
 # POS-Tagger
-Platform: Google Colab
+
+Platform:
+---------
+Google Colab
 Implementation:
+-----------------------
 Trigram and Bigram Model of POS Tagger
 Dataset: English Penn Treebank (PTB) corpus
 All Tags List: https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html
+---------------------------------------------------------------------------
 Overall Accuracy with 36 POS Tags:
 Overall accuracy: 82.87272504442674. 
 
 However accuracy was affected due to presence of some unknown tags in Dataset
 
 Class-Wise Accuracy with 36 POS Tags:
+------------------------------------
 
 Class Wise Accuracy
 WRB: 89.74358974358975
@@ -54,7 +60,7 @@ JJS: 70.45454545454545
 LS: 0.0
 RBS: 20.0
 
-
+--------------------------------------------------
 Overall Accuracy with 4 POS Tags:
 Overall accuracy: 90.3793124578712
 Where A: All Adverb Tags
@@ -71,6 +77,7 @@ N: 90.30146425495262
 
 
 Change in Accuracy on number of tags collapsing from 36 to 4:
+--------------------------------------------------------------
 Yes, Accuracy increased on collapsing number of tags from 36 to 4, accuracy increased from 83% to 91%, this increase in accuracy is very good.
 According to us accuracy increased because of decrease in number of possibilities of tags for a given word, suppose Tony is a name of person, but it may be name of some other things and both may occur in dataset with different noun tag (Like NN and NNS) so our 36 POS tagging model may classify the word with NN instead of NNS but there is also possibility that NN may be tag for Tony but according to dataset it will be wrong.
 But after collapsing 36 Tags to 4 Tags, now Tony will always be tagged as noun ‘N’ irrespective of whether it is NNS or NN. Which will automatically increase transition probability involving N.
